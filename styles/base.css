@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #001a62;
+    --secondary-color: #b1c0ec;
+    --accent-color: #001a62;
+    --additional-accent-color: #cdd1de;
+    --navigation-background-color: #cdd1de;
+    --navigation-link-color: #001a62;
+    --navigation-hover-link-color: #cdd1de;
+    --navigation-hover-background-color: #001a62;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    }
+      
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--additional-accent-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    }
+
+
+img{
+    width: 30%;
+}
+
+
+header{
+    background-color: var(--additional-accent-color);
+}
+
+nav {
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    }
+
+
+nav a:link, nav a:visited {
+    color: var(--navigation-link-color);
+    }
+
+nav a:hover {
+    color: var(--navigation-background-color);
+    background-color: var(--navigation-hover-background-color);
+}
+
+main{
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    gap: 1%;
+    max-width:100%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.card{
+    border: 2px solid #001a62;
+}
+
+section:nth-child(1){
+    
+    grid-column: 1/2;
+    background-color: var(--additional-accent-color);
+    display: grid;
+    grid-template: auto 2fr/ 1fr 1fr 1fr ;
+}
+
+.cardHeader{
+    text-align: center;
+    grid-column: 1/4;
+}
+
+section h2{
+    text-align: center;
+    grid-column: 1/4;
+}
+
+#aboutMe{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#meDescription{
+    padding:1rem;
+    margin: 1rem;
+}
+
+#aboutArizona{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#aboutArizona p, #aboutArizona img{
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+
+section:nth-child(2){
+   
+    background-color: var(--additional-accent-color);
+    display: grid;
+    grid-template: auto 3fr/ 1fr;
+}
+
+#wdrList{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+footer{
+    
+    text-align: center;
+    background-color: var(--additional-accent-color);
+    align-items: center;
+    
+}
+
+

@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Home page for WDD 131 by Chad Hatch">
+    <meta name="author" content="Chad Hatch">
+    <title>WDD 131 - Dynamic Web Fundamentals - Chad Hatch</title>
+    <link href="styles/base.css" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>WDD131 - CHAD HATCH</h1>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Chad Hatch </h1>
+        <nav>
+            <a href="https://www.linkedin.com/">linkedin</a>
+            <a href="https://byui.instructure.com/">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <div class="cardheader">
+                <h2>About Me</h2>
+            </div>
+            <div id="aboutMe">
+                <p id="meDescription">My name is Chad Hatch. I am originally from California but currently live in Arizona and have been for the past 15 years. I am new to the software development world. 
+                I changed my major just this last December so this is only my second semester taking classes that have to do with web development or programming. It is a challenge for sure to try and study, work, and take care of 
+                our 3 little girls, 2-year-old twins, and a 7-year-old. </p>
+                <img src="images/profile.jpg" alt="Chad Selfie">
+            </div>
+            <h2>Arizona, United States of America</h2>
+            <div id="aboutArizona">
+                <p id="azHistory">In AZ we have some of the hottest weather in the country, which isn't something to be proud of. We are the 48th state to have become a state out of the 50 states that we have.
+                    Arizona produces silver and gold, but its top metal is copper—the state produces the most in the United States. In the early 1900s, the state’s copper helped build Arizona’s railroads. 
+                    Part of the largest stand of ponderosas lies in Arizona and extends into New Mexico, which yield lumber and paper.</p>
+                <img src="images/az-flag.jpg" alt="Picture of AZ flag">
+            </div>
+        </section>
+        <section class="card">
+            <div class="cardHeader">
+               <h2>Web Dev Resources</h2> 
+            </div>
+            
+            <ul id="wdrList">
+                <li><a href="https://www.codecademy.com/">Code Academy</a></li>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://codefinity.com/">Code Definity</a></li>
+                <li><a href="https://placekitten.com/">Placeholder Cat Images</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span id="currentYear">©️2024</span> 🇵🇪 Chad Hatch 🇵🇪 USA
+        </p>
+        <p id="lastModified">Placeholder last modified</p>
+    </footer>
 </body>
 </html>
