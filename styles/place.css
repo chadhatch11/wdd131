@@ -63,7 +63,11 @@ li {
     text-align: right;
     font-weight: 700;
 }
-
+#data b::after, #weather b::after {
+    content: "  ";
+    position: absolute;
+    right: 10px;
+}
 
 footer{
     line-height: 2rem;
