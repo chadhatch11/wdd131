@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is about a place I have lived and help practice using Javascript.">
+    <meta name="author" content="Chad Hatch">
+    <title>Peru - WDD 131 - Dynamic Web Fundamentals - Chad Hatch</title>
+    <link href="styles/place.css" rel="stylesheet">
+    <link href="styles/place-large.css" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Peru </h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/machu-picchu.webp" media="(min-width: 950px)">
+            <img src="images/rainbow.webp" alt="Rainbow Mountain">
+        </picture>
+            <div id="data">
+                <h2>Data</h2>
+                <ul>
+                    <li><b>Area :</b> 1,285,216 sq km</li>
+                    <li><b>Population :</b> 34,000,000</li>
+                    <li><b>Capital :</b> Lima</li>
+                    <li><b>Languages :</b> Spanish & Quechua</li>
+                    <li><b>Currency :</b> Sol peruano (PEN)</li>
+                    <li><b>Time Zone :</b> GMT-5</li>
+                    <li><b>Calling Code :</b> +51</li>
+                    <li><b>Internet TLD :</b> .pe</li>
+                </ul>
+            </div>
+            <div id="weather">
+              <h2>Weather</h2>
+              <img id="sun" src="images/weather.svg" alt="cloudy" width="100">
+            <ul>
+                <li id="temperature"><b>Temperature :</b> 10°C</li>
+                <li id="weatherCondition"><b>Condition :</b> Cloudy</li>
+                <li id="wind"><b>Wind :</b> 10 km/h</li>
+                <li id="windChill"><b>Wind Chill :</b> 8.6°C</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <span id="currentYear">©️2024</span> 🇵🇪 Chad Hatch 🇵🇪 USA
+        </p>
+        <p id="lastModified">Placeholder last modified</p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>
