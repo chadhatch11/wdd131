@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+    <main>
+        <p>Your review has been submitted successfully.</p>
+        <p>Total reviews submitted: <span id="reviewCount">0</span></p>
+    </main>
+    <footer>
+        <p>&copy; <span id="copyright"></span> Chad Hatch 🇵🇪 USA</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reviewCount = localStorage.getItem('reviewCount') || 0;
+            localStorage.setItem('reviewCount', parseInt(reviewCount) + 1);
+            document.getElementById('reviewCount').textContent = localStorage.getItem('reviewCount');
+            document.getElementById('copyright').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = document.lastModified;
+        });
+    </script>
+</body>
+</html>

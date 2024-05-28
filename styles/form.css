@@ -1,161 +1,81 @@
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
-
-* {
-    box-sizing: border-box;
-    margin: auto;
-}
-
 body {
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
-    padding: 1rem;
-    background-color: #264653;
+    background-color: #4CAF50;
     color: white;
+    padding: 10px 0;
     text-align: center;
-    margin-bottom: 1rem;
 }
 
-#reviewForm {
-    max-width: 500px;
+main {
+    padding: 20px;
 }
 
-#reviewForm fieldset {
-    margin: .5rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 1rem;
-    background-color: #aaaeba;
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#reviewForm label {
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+label {
     display: block;
+    margin-bottom: 15px;
 }
 
-#reviewForm select {
-    background-color: white;
-    display: block;
-    border: solid 1px #999;
-    border-radius: 6px;
-    padding: 17px;
-    color: #555;
+input[type="text"], input[type="date"], textarea, select {
     width: 100%;
-    appearance: none;
-    margin: .5rem 0;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#overallRating {
-    margin-top: 2.5rem;
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
 }
 
-#radioButtons {
-    display: flex;
-    margin: .2rem;
+#radioButtons label {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.ratingButton {
-    margin-top: .5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-#installLabel {
-    margin-top: 2.5rem;
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
-#installDate {
-    display: block;
-    background-color: white;
-    border: solid 1px #999;
-    border-radius: 6px;
-    padding: 17px;
-    color: #555;
-    width: 100%;
-    appearance: none;
-    margin: .5rem 0;
-}
-
-#featuresLabel {
-    margin-top: 2.5rem;
-    margin-bottom: .5rem;
-}
-
-.usefulFeatures {
-    margin: .5rem 0;
-}
-
-#bottomCheckbox {
-    margin-bottom: 2.5rem;
-}
-
-#reviewLabel {
-    margin-top: 2rem;
-    margin-bottom: .5rem;
-}
-
-#writtenReview {
-    width: 100%;
-    border: solid 1px #999;
-    border-radius: 6px;
-    margin-top: .5rem;
-}
-
-#nameLabel {
-    margin-top: 2.5rem;
-}
-
-#name {
-    display: block;
-    background-color: white;
-    border: solid 1px #999;
-    border-radius: 6px;
-    padding: 17px;
-    color: #555;
-    width: 100%;
-    appearance: none;
-    margin: .5rem 0;
-}
-
-#postReview {
-    width: 100%;
-    margin-top: 2rem;
-    padding: 18px;
-    border: solid 1px #999;
-    border-radius: 6px;
-    font-size: large;
-    font-weight: bold;
-    appearance: none;
+.optional {
+    color: blue;
 }
 
 footer {
-    padding: 1rem;
-    background-color: #264653;
-    color: white;
     text-align: center;
-    margin-top: 1rem;
-}
-
-.blue {
-    color: #264653;
-    font-size: smaller;
-}
-
-/* review.html */
-
-#postReviewHeading {
-    text-align: center;
-    margin-top: 10rem;
-}
-
-main p {
-    text-align: center;
-    margin: 1rem auto;
-    margin-bottom: 15rem;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f4f4f4;
 }

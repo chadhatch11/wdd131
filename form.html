@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Chad Hatch Product Review Form</title>
-    <meta name="description" content="This is a standard HMTL web page with an HTMl form that upon completion takes the user to a completion screen.">
+    <meta name="description" content="This is a standard HTML web page with an HTML form that upon completion takes the user to a completion screen.">
     <meta name="author" content="Chad Hatch">
     <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/form.js" defer=""></script>
+    <script src="scripts/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,45 +16,47 @@
     <main>
         <form method="get" action="review.html" id="reviewForm">
             <fieldset>
-
-                <label>Product Name
-                    <select name="productName" id="productName" required="">
-                        <option value="" disabled="" selected="">Select a Product ▾</option>
-                    <option value="fc-1888">flux capacitor</option><option value="fc-2050">power laces</option><option value="fs-1987">time circuits</option><option value="ac-2000">low voltage reactor</option><option value="jj-1969">warp equalizer</option></select>
+                <label for="productName">Product Name
+                    <select name="productName" id="productName" required>
+                        <option value="" disabled selected>Select a Product ▾</option>
+                    </select>
                 </label>
 
-                <div id="overallRating">Overall Rating</div>
+                <label for="installDate">Date of Installation
+                    <input type="date" name="installDate" id="installDate" required>
+                </label>
+
+                <div>Overall Rating</div>
                 <div id="radioButtons">
-                    <label><input type="radio" name="starRating" value="oneStar" class="ratingButton" required="">☆</label>
-                    <label><input type="radio" name="starRating" value="twoStar" class="ratingButton" required="">☆☆</label>
-                    <label><input type="radio" name="starRating" value="threeStar" class="ratingButton" required="">☆☆☆</label>
-                    <label><input type="radio" name="starRating" value="fourStar" class="ratingButton" required="">☆☆☆☆</label>
-                    <label><input type="radio" name="starRating" value="fiveStar" class="ratingButton" required="">☆☆☆☆☆</label>
+                    <label for="oneStar"><input type="radio" id="oneStar" name="starRating" value="1" required>☆</label>
+                    <label for="twoStar"><input type="radio" id="twoStar" name="starRating" value="2">☆☆</label>
+                    <label for="threeStar"><input type="radio" id="threeStar" name="starRating" value="3">☆☆☆</label>
+                    <label for="fourStar"><input type="radio" id="fourStar" name="starRating" value="4">☆☆☆☆</label>
+                    <label for="fiveStar"><input type="radio" id="fiveStar" name="starRating" value="5">☆☆☆☆☆</label>
                 </div>
 
-                <label id="installLabel">Date of Installation <input type="date" name="installDate" id="installDate" required=""></label>
+                <div>Which features did you find useful in the product?<br><i>(Check all that apply)</i></div>
+                <label for="durability"><input type="checkbox" id="durability" name="features" value="durability"> Durability</label>
+                <label for="easeOfUse"><input type="checkbox" id="easeOfUse" name="features" value="easeOfUse"> Ease of Use</label>
+                <label for="performance"><input type="checkbox" id="performance" name="features" value="performance"> Performance</label>
+                <label for="design"><input type="checkbox" id="design" name="features" value="design"> Design</label>
 
-                <div id="featuresLabel">Which features did you find useful in the product?<br><i>(Check all that
-                        apply)</i></div>
-                <label><input type="checkbox" name="durability" value="yes" class="usefulFeatures"> Durability</label>
-                <label><input type="checkbox" name="easeOfUse" value="yes" class="usefulFeatures"> Ease of Use</label>
-                <label><input type="checkbox" name="performance" value="yes" class="usefulFeatures"> Performance</label>
-                <label><input type="checkbox" name="design" value="yes" class="usefulFeatures" id="bottomCheckbox">
-                    Design</label>
+                <label for="writtenReview">Written Review <span class="optional">(Optional)</span>
+                    <textarea id="writtenReview" name="writtenReview" rows="6"></textarea>
+                </label>
 
-                <label><span id="reviewLabel">Written Review <span class="blue">(Optional)</span></span><textarea id="writtenReview" name="writtenReview" rows="6"></textarea></label>
-
-                <label id="nameLabel">Your Name <span class="blue">(Optional)</span><input type="text" id="name" name="userName"></label>
+                <label for="userName">Your Name <span class="optional">(Optional)</span>
+                    <input type="text" id="userName" name="userName">
+                </label>
 
                 <input id="postReview" type="submit" value="Post Review">
-
             </fieldset>
         </form>
     </main>
     <footer>
-        <p>&copy; <span id="copyright"></span> 🇵🇪 Chad Hatch 🇵🇪 USA
-        </p>
+        <p>&copy; <span id="copyright"></span> Chad Hatch 🇵🇪 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
     <script src="scripts/getdates.js" defer></script>
 </body>
+</html>
