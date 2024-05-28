@@ -73,34 +73,85 @@ const temples = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.getElementById('temple-gallery');
+  const navLinks = document.querySelectorAll('nav a');
 
-  temples.forEach(temple => {
-      const templeCard = document.createElement('section');
-      templeCard.classList.add('temple-card');
+  function displayTemples(filteredTemples) {
+      gallery.innerHTML = '';
+      filteredTemples.forEach(temple => {
+          const templeCard = document.createElement('section');
+          templeCard.classList.add('temple-card');
 
-      const templeName = document.createElement('h3');
-      templeName.textContent = temple.templeName;
+          const templeName = document.createElement('h3');
+          templeName.textContent = temple.templeName;
 
-      const location = document.createElement('p');
-      location.innerHTML = `<span class="label">Location: <span>${temple.location}</span></span>`;
+          const location = document.createElement('p');
+          location.innerHTML = `<span class="label">Location: <span>${temple.location}</span></span>`;
 
-      const dedicated = document.createElement('p');
-      dedicated.innerHTML = `<span class="label">Dedicated: <span>${temple.dedicated}</span></span>`;
+          const dedicated = document.createElement('p');
+          dedicated.innerHTML = `<span class="label">Dedicated: <span>${temple.dedicated}</span></span>`;
 
-      const area = document.createElement('p');
-      area.innerHTML = `<span class="label">Size: <span>${temple.area} sq ft</span></span>`;
+          const area = document.createElement('p');
+          area.innerHTML = `<span class="label">Size: <span>${temple.area} sq ft</span></span>`;
 
-      const image = document.createElement('img');
-      image.src = temple.imageUrl;
-      image.alt = `${temple.templeName} Temple`;
-      image.loading = 'lazy';
+          const image = document.createElement('img');
+          image.src = temple.imageUrl;
+          image.alt = `${temple.templeName} Temple`;
+          image.loading = 'lazy';
 
-      templeCard.appendChild(templeName);
-      templeCard.appendChild(location);
-      templeCard.appendChild(dedicated);
-      templeCard.appendChild(area);
-      templeCard.appendChild(image);
+          templeCard.appendChild(templeName);
+          templeCard.appendChild(location);
+          templeCard.appendChild(dedicated);
+          templeCard.appendHere
 
-      gallery.appendChild(templeCard);
+
+
+
+          templeCard.appendChild(area);
+          templeCard.appendChild(image);
+
+          gallery.appendChild(templeCard);
+      });
+  }
+
+  function filterTemples(criteria) {
+      let filteredTemples = [];
+      const currentYear = new Date().getFullYear();
+
+      switch (criteria) {
+          case 'old':
+              filteredTemples = temples.filter(temple => {
+                  const year = parseInt(temple.dedicated.split(',')[0]);
+                  return year < 1900;
+              });
+              break;
+          case 'new':
+              filteredTemples = temples.filter(temple => {
+                  const year = parseInt(temple.dedicated.split(',')[0]);
+                  return year >= 2000;
+              });
+              break;
+          case 'large':
+              filteredTemples = temples.filter(temple => temple.area > 90000);
+              break;
+          case 'small':
+              filteredTemples = temples.filter(temple => temple.area < 10000);
+              break;
+          default:
+              filteredTemples = temples;
+              break;
+      }
+
+      displayTemples(filteredTemples);
+  }
+
+  navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const filterCriteria = e.target.getAttribute('data-filter');
+          filterTemples(filterCriteria);
+      });
   });
+
+  // Display all temples on initial load
+  filterTemples('all');
 });
