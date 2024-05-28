@@ -11,58 +11,61 @@
         <link rel="stylesheet" href="styles/filtered-temple.css">
         <link rel="stylesheet" href="styles/filtered-temples-large.cs">
     </head>
-<body>
-    <header>
-        <h1>Temple Album
-        </h1>
-        <nav>
-            <button class="hamburger">&#9776;</button>
-            <a href="#">Home</a>
-            <a href="#">Old</a>
-            <a href="#">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
-        </nav>
-    </header>
-    <main>
-        <h2 id="home">Home</h2>
-        <div id="temple-img"><section id="temple-card"><h3>Aba Nigeria</h3><p><span class="label">Location: <span>Aba, Nigeria</span></span></p><p><span class="label">Dedicated: <span>2005, August, 7</span></span></p><p><span class="label">Size: <span>11500 sq ft</span></span></p><img src="images/aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Manti Utah</h3><p><span class="label">Location: <span>Manti, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>1888, May, 21</span></span></p><p><span class="label">Size: <span>74792 sq ft</span></span></p><img src="images/manti-temple.jpeg" alt="Manti Utah Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Payson Utah</h3><p><span class="label">Location: <span>Payson, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>2015, June, 7</span></span></p><p><span class="label">Size: <span>96630 sq ft</span></span></p><img src="images/payson-utah-temple.jpeg" alt="Payson Utah Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Yigo Guam</h3><p><span class="label">Location: <span>Yigo, Guam</span></span></p><p><span class="label">Dedicated: <span>2020, May, 2</span></span></p><p><span class="label">Size: <span>6861 sq ft</span></span></p><img src="images/yigo_guam_temple.jpeg" alt="Yigo Guam Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Washington D.C.</h3><p><span class="label">Location: <span>Kensington, Maryland, United States</span></span></p><p><span class="label">Dedicated: <span>1974, November, 19</span></span></p><p><span class="label">Size: <span>156558 sq ft</span></span></p><img src="images/washington_dc_temple.jpeg" alt="Washington D.C. Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Lima Perú</h3><p><span class="label">Location: <span>Lima, Perú</span></span></p><p><span class="label">Dedicated: <span>1986, January, 10</span></span></p><p><span class="label">Size: <span>9600 sq ft</span></span></p><img src="images/lima-peru-temple.jpeg" alt="Lima Perú Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Mexico City Mexico</h3><p><span class="label">Location: <span>Mexico City, Mexico</span></span></p><p><span class="label">Dedicated: <span>1983, December, 2</span></span></p><p><span class="label">Size: <span>116642 sq ft</span></span></p><img src="images/mexico-city-temple.jpeg" alt="Mexico City Mexico Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Oklahoma Temple</h3><p><span class="label">Location: <span>Oklahoma City, Oklahoma, United States</span></span></p><p><span class="label">Dedicated: <span>2000, July, 30</span></span></p><p><span class="label">Size: <span>10890 sq ft</span></span></p><img src="images/mexico-city-temple.jpeg" alt="Oklahoma Temple Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Salt Lake Temple</h3><p><span class="label">Location: <span>Salt Lake City, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>1893, April, 6-24</span></span></p><p><span class="label">Size: <span>382207 sq ft</span></span></p><img src="images/slc-temple.jpeg" alt="Salt Lake Temple Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>St. George Utah Temple</h3><p><span class="label">Location: <span>St. George, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>1877, April, 6-8</span></span></p><p><span class="label">Size: <span>143969 sq ft</span></span></p><img src="images/st-george-utah-temple.jpeg" alt="St. George Utah Temple Temple" loading="lazy" width="400" height="250"></section></div>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-        <figure><img src="#" alt="#">
-            <figcaption> </figcaption>
-        </figure>
-    </main>
-    <footer>
-        <p>&copy; <span id="copyright"></span> 🇵🇪 Chad Hatch 🇵🇪 USA
-        </p>
-        <p>Last modified: <span id="lastModified"></span></p>
-    </footer>
-
-        <script src="scripts/filtered-temples.js" defer></script>
-
-</body>
-</html>
+    <body>
+        <header>
+            <nav id="nav">
+                <div id="nav-header">
+                    <h1>Temple Album</h1>
+                    <button id="hamburger" title="menu button"></button>
+                </div>
+                <ul>
+                    <li><a id="home-button">Home</a></li>
+                    <li><a id="old-button">Old</a></li>
+                    <li><a id="new-button">New</a></li>
+                    <li><a id="large-button">Large</a></li>
+                    <li><a id="small-button">Small</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 id="home">Home</h2>
+            <div id="temple-img"><section id="temple-card"><h3>Aba Nigeria</h3><p><span class="label">Location: <span>Aba, Nigeria</span></span></p><p><span class="label">Dedicated: <span>2005, August, 7</span></span></p><p><span class="label">Size: <span>11500 sq ft</span></span></p><img src="images/aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Manti Utah</h3><p><span class="label">Location: <span>Manti, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>1888, May, 21</span></span></p><p><span class="label">Size: <span>74792 sq ft</span></span></p><img src="images/manti-temple.jpeg" alt="Manti Utah Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Payson Utah</h3><p><span class="label">Location: <span>Payson, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>2015, June, 7</span></span></p><p><span class="label">Size: <span>96630 sq ft</span></span></p><img src="images/payson-utah-temple.jpeg" alt="Payson Utah Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Yigo Guam</h3><p><span class="label">Location: <span>Yigo, Guam</span></span></p><p><span class="label">Dedicated: <span>2020, May, 2</span></span></p><p><span class="label">Size: <span>6861 sq ft</span></span></p><img src="images/yigo_guam_temple.jpeg" alt="Yigo Guam Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Washington D.C.</h3><p><span class="label">Location: <span>Kensington, Maryland, United States</span></span></p><p><span class="label">Dedicated: <span>1974, November, 19</span></span></p><p><span class="label">Size: <span>156558 sq ft</span></span></p><img src="images/washington_dc_temple.jpeg" alt="Washington D.C. Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Lima Perú</h3><p><span class="label">Location: <span>Lima, Perú</span></span></p><p><span class="label">Dedicated: <span>1986, January, 10</span></span></p><p><span class="label">Size: <span>9600 sq ft</span></span></p><img src="images/lima-peru-temple.jpeg" alt="Lima Perú Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Mexico City Mexico</h3><p><span class="label">Location: <span>Mexico City, Mexico</span></span></p><p><span class="label">Dedicated: <span>1983, December, 2</span></span></p><p><span class="label">Size: <span>116642 sq ft</span></span></p><img src="images/mexico-city-temple.jpeg" alt="Mexico City Mexico Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Oklahoma Temple</h3><p><span class="label">Location: <span>Oklahoma City, Oklahoma, United States</span></span></p><p><span class="label">Dedicated: <span>2000, July, 30</span></span></p><p><span class="label">Size: <span>10890 sq ft</span></span></p><img src="images/mexico-city-temple.jpeg" alt="Oklahoma Temple Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>Salt Lake Temple</h3><p><span class="label">Location: <span>Salt Lake City, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>1893, April, 6-24</span></span></p><p><span class="label">Size: <span>382207 sq ft</span></span></p><img src="images/slc-temple.jpeg" alt="Salt Lake Temple Temple" loading="lazy" width="400" height="250"></section><section id="temple-card"><h3>St. George Utah Temple</h3><p><span class="label">Location: <span>St. George, Utah, United States</span></span></p><p><span class="label">Dedicated: <span>1877, April, 6-8</span></span></p><p><span class="label">Size: <span>143969 sq ft</span></span></p><img src="images/st-george-utah-temple.jpeg" alt="St. George Utah Temple Temple" loading="lazy" width="400" height="250"></section></div>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+            <figure><img src="#" alt="#">
+                <figcaption> </figcaption>
+            </figure>
+        </main>
+        <footer>
+            <p>&copy; <span id="copyright"></span> 🇵🇪 Chad Hatch 🇵🇪 USA
+            </p>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </footer>
+    
+            <script src="scripts/temples.js" defer></script>
+    
+    </body>
+    </html>
 
