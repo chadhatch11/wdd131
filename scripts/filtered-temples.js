@@ -51,8 +51,8 @@ const temples = [
   {
       templeName: "Trujillo Peru Temple",
       location: "Trujillo, Peru",
-      dedicated: "2000, July, 30",
-      area: 10890,
+      dedicated: "2015, June, 21",
+      area: 28200,
       imageUrl: "images/trujillo-temple.jpg"
   },
   {
@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
           filterTemples(filterCriteria);
       });
   });
-
-  // Display all temples on initial load
+  
   filterTemples('all');
 });
