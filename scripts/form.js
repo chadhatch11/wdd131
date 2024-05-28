@@ -14,4 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
         option.textContent = product.name;
         productNameSelect.appendChild(option);
     });
-});
+}); 

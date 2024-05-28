@@ -18,14 +18,7 @@
         <p>&copy; <span id="copyright"></span>🇵🇪 Chad Hatch 🇵🇪 USA</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reviewCount = localStorage.getItem('reviewCount') || 0;
-            localStorage.setItem('reviewCount', parseInt(reviewCount) + 1);
-            document.getElementById('reviewCount').textContent = localStorage.getItem('reviewCount');
-            document.getElementById('copyright').textContent = new Date().getFullYear();
-            document.getElementById('lastModified').textContent = document.lastModified;
-        });
-    </script>
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </body>
 </html>
