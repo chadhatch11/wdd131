@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Crypto Pages - Chad Hatch Final Project</title>
+    <meta name="description" content="This is a website that has information about crypto">
+    <meta name="author" content="Chad Hatch">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/crypto.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/crypto.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Cryptocurrency</h1>
+            <nav>
+                <a href="#" @click.prevent="currentView = 'home'">Home</a>
+                <a href="#" @click.prevent="currentView = 'education'">Education</a>
+                <a href="#" @click.prevent="currentView = 'prices'">Prices</a>
+            </nav>
+        </header>
+        <main>
+            <div v-if="currentView === 'home'">
+                <h3>Welcome to the Cryptocurrency Home Page</h3>
+                <p>Some introductory content about cryptocurrency.</p>
+            </div>
+            <div v-if="currentView === 'education'">
+                <h3>Cryptocurrency Education</h3>
+                <p>Educational content about cryptocurrency.</p>
+            </div>
+            <div v-if="currentView === 'prices'">
+                <h3>Cryptocurrency Prices</h3>
+                <div class="container">
+                    <div v-for="(result, key) in results" :key="key">
+                        <div class="item crypto">
+                            <p>{{ key }}</p>
+                        </div>
+                        <div class="item result">
+                            <p>$ {{ result.USD }}</p>
+                        </div>
+                        <div class="item result">
+                            <p>&#8364; {{ result.EUR }}</p>
+                        </div>
+                        <div class="item result">
+                            <p>£ {{ result.GBP }}</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>  
+        </main>
+        <footer>
+            <p>&copy; <span id="copyright"></span>🇵🇪 Chad Hatch 🇵🇪 USA</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+    <script src="scripts/getdates.js" defer></script>
+</body>
+</html>

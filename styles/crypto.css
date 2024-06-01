@@ -1,0 +1,101 @@
+:root {
+    --blue: #2E2A42;
+    --white: #fff;
+    --background-color: darkseagreen;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Caveat", sans-serif;
+}
+
+header {
+    font-size: 35px;
+    background-color: darkseagreen;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 2rem;
+}
+
+header, main {
+    margin: 0 auto;
+}
+
+h1 {
+    color: #000;
+    font-size: 50px; 
+    text-align: left;
+    align-items: last baseline;
+}
+
+nav {
+
+    color: white;
+    text-align: right;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem; 
+    border-radius: 4px; 
+
+}
+
+nav a:hover {
+    background-color: gray; 
+    color: white; 
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 22px;
+    background-color: var(--white);
+    color: var(--blue); 
+}
+
+.hamburger {
+    display: none;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.crypto {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h3 {
+    text-align: center;
+    padding: 30px;
+    color: var(--yellow);
+    font-size: 42px;
+}
+
+footer {
+    height: 75px;
+    color: #000;
+    text-align: center;
+    align-items: center;
+}
