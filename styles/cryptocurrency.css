@@ -551,8 +551,8 @@ button:hover {
 
 .home-hero a {
     position: absolute;
-    right: 900px;    
-    top:350px;
+    right: 700px;    
+    top:400px;
     color: var(--additional-accent-color);
     background-color: var(--primary-color);
     padding: 1rem 2rem;
@@ -565,5 +565,5 @@ button:hover {
 
 .home-hero a:hover {
     background-color: #ffffff14;
-    color: #5073b5;
+    color: #020202;
 }
