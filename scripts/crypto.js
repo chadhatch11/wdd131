@@ -1,28 +1,33 @@
 const url = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD,EUR,GBP";
 
 const vm = new Vue({
-    el: '#app',   
+    el: '#app',
     data: {
         results: {},
-        currentView: 'home'
+        currentView: 'prices'
     },
     mounted() {
         if (this.currentView === 'prices') {
-            this.update();
-            this.timer = setInterval(this.update, 1000);
+            this.startUpdating();
         }
     },
     watch: {
         currentView: function(newView) {
             if (newView === 'prices') {
-                this.update();
-                this.timer = setInterval(this.update, 1000);
+                this.startUpdating();
             } else {
-                clearInterval(this.timer);
+                this.stopUpdating();
             }
         }
     },
     methods: {
+        startUpdating: function() {
+            this.update();
+            this.timer = setInterval(this.update, 1000);
+        },
+        stopUpdating: function() {
+            clearInterval(this.timer);
+        },
         update: function() {
             axios.get(url).then(response => {
                 this.results = response.data;
