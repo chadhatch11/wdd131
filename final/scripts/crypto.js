@@ -1,4 +1,4 @@
-const url = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD,EUR,GBP";
+const url = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,XRP&tsyms=USD,EUR,GBP";
 
 const vm = new Vue({
     el: '#app',
