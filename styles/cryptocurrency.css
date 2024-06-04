@@ -77,7 +77,14 @@ footer div {
 .image-display h2 {
     margin: 2em;
 }
-
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    background-color: #bcbbbb;
+    color: #000; 
+}
 .image-display div {
     display: flex;
     justify-content: flex-start;
